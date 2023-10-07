@@ -1,7 +1,5 @@
 # plant-leaf-detection-and-classification 
-[![Linkedin](https://static.vecteezy.com/system/resources/previews/018/930/587/non_2x/linkedin-logo-linkedin-icon-transparent-free-png.png)]()
-[![Hugging face](https://huggingface.co/datasets/huggingface/brand-assets/resolve/main/hf-logo.png)](https://huggingface.co/foduucom/plant-leaf-detection-and-classification)
-
+![](https://github.com/foduucom/product-detection-in-shelf-yolov8/blob/main/thumbnail.jpg)
 
 ## Model Summary
 The YOLOv8s Leaf Detection and Classification model is an object detection model based on the YOLO (You Only Look Once) framework. It is designed to detect and classify various types of leaves in images. The model has achieved a precision (mAP@0.5) of 0.946 on the object detection task.
