@@ -8,7 +8,9 @@ The YOLOv8s Leaf Detection and Classification model is an object detection model
 ## Model Description
 The YOLOv8s Leaf Detection and Classification model is built on the YOLOv8 architecture, which is known for its real-time object detection capabilities. This specific model has been trained to recognize and classify different types of leaves from various plant species. It can detect multiple leaf instances in an image and assign them to their respective classes.
 
-```['ginger', 'banana', 'tobacco', 'ornamaental', 'rose', 'soyabean', 'papaya', 'garlic', 'raspberry', 'mango', 'cotton', 'corn', 'pomgernate', 'strawberry', 'Blueberry', 'brinjal', 'potato', 'wheat', 'olive', 'rice', 'lemon', 'cabbage', 'gauava', 'chilli', 'capcicum', 'sunflower', 'cherry', 'cassava', 'apple', 'tea', 'sugarcane', 'groundnut', 'weed', 'peach', 'coffee', 'cauliflower', 'tomato', 'onion', 'gram', 'chiku', 'jamun', 'castor', 'pea', 'cucumber', 'grape', 'cardamom']```
+```
+['ginger', 'banana', 'tobacco', 'ornamaental', 'rose', 'soyabean', 'papaya', 'garlic', 'raspberry', 'mango', 'cotton', 'corn', 'pomgernate', 'strawberry', 'Blueberry', 'brinjal', 'potato', 'wheat', 'olive', 'rice', 'lemon', 'cabbage', 'gauava', 'chilli', 'capcicum', 'sunflower', 'cherry', 'cassava', 'apple', 'tea', 'sugarcane', 'groundnut', 'weed', 'peach', 'coffee', 'cauliflower', 'tomato', 'onion', 'gram', 'chiku', 'jamun', 'castor', 'pea', 'cucumber', 'grape', 'cardamom']
+```
 
 ## Developed by: FODUU AI
 ## Model type: Object Detection
@@ -23,27 +25,34 @@ To get started with the YOLOv8s Leaf Detection and Classification model, follow 
 ```
 Install ultralyticsplus and ultralytics libraries using pip:
 pip install ultralyticsplus==0.0.28 ultralytics==8.0.43
-
-#Load the model and perform prediction using the provided code snippet.
+```
+### Load the model and perform prediction using the provided code snippet.
+```
 from ultralyticsplus import YOLO, render_result
-
-# load model
+```
+### load model
+```
 model = YOLO('foduucom/plant-leaf-detection-and-classification')
+```
 
-# set model parameters
+### set model parameters
+```
 model.overrides['conf'] = 0.25  # NMS confidence threshold
 model.overrides['iou'] = 0.45  # NMS IoU threshold
 model.overrides['agnostic_nms'] = False  # NMS class-agnostic
 model.overrides['max_det'] = 1000  # maximum number of detections per image
 
-
-# set image
+```
+### set image
+```
 image = 'path/to/your/image'
-
-# perform inference
+```
+### perform inference
+```
 results = model.predict(image)
-
-# observe results
+```
+### observe results
+```
 print(results[0].boxes)
 render = render_result(model=model, image=image, result=results[0])
 render.show()
@@ -57,8 +66,8 @@ The model is trained on hundreds of images of 46 different plants, including bot
 The training process involves using high GPU capacity and is run for up to 50 epochs, where each epoch represents a complete pass through the entire training dataset, adjusting model weights to minimize the classification loss and optimize the performance.
 
 ### Metrics
-mAP@0.5 (box): 0.946
-Summary
+* mAP@0.5 (box): 0.946
+### Summary
 YOLOv8s is a powerful convolutional neural network tailored for leaf detection and classification of over 46 plant species. It leverages a modified CSPDarknet53 backbone, self-attention mechanism, and a feature pyramid network for accurate multi-scaled object detection, providing precise identification and classification of plant leaves.
 
 ## Model Architecture and Objective
