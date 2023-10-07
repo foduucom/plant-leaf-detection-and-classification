@@ -1,5 +1,5 @@
 # plant-leaf-detection-and-classification 
-[![](https://github.com/foduucom/plant-leaf-detection-and-classification/blob/main/Spaces-Hugging-Face.png)](https://huggingface.co/spaces/foduucom/plant-leaf-detection-classification-yolov8)
+[![](https://img.shields.io/badge/hugging_face-space-yellow)](https://huggingface.co/spaces/foduucom/plant-leaf-detection-classification-yolov8)
 ![](https://github.com/foduucom/product-detection-in-shelf-yolov8/blob/main/thumbnail.jpg)
 
 ## Model Summary
